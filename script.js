@@ -32,3 +32,14 @@ document.addEventListener("click", (e) => {
         }
     }
 })
+document.addEventListener('DOMContentLoaded', function () {
+  const heart = document.querySelector('.heart');
+  const envelope = document.querySelector('.envelope');
+
+  if (heart && envelope) {
+    heart.addEventListener('click', function (event) {
+      event.stopPropagation();
+      envelope.classList.toggle('abierta');
+    });
+  }
+});
